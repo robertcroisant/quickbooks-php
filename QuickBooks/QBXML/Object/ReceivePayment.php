@@ -16,6 +16,11 @@
 QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 
 /**
+ * HasTxnDate trait
+ */
+Quickbooks_Loader::load('/Quickbooks/QBXML/Traits/HasTxnDate.php');
+
+/**
  * Dependency class (applied payment)
  */
 QuickBooks_Loader::load('/QuickBooks/QBXML/Object/ReceivePayment/AppliedToTxn.php');
@@ -25,6 +30,8 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/ReceivePayment/AppliedToTxn.ph
  */
 class QuickBooks_QBXML_Object_ReceivePayment extends QuickBooks_QBXML_Object
 {
+	use HasTxnDate;
+	
 	/**
 	 * Create a new QuickBooks_Object_ReceivePayment object
 	 * 
