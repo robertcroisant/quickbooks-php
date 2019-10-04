@@ -30,7 +30,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/ReceivePayment/AppliedToTxn.ph
  */
 class QuickBooks_QBXML_Object_ReceivePayment extends QuickBooks_QBXML_Object
 {
-	use HasTxnDate;
+	use QuickBooks_QBXML_Traits_HasTxnDate;
 	
 	/**
 	 * Create a new QuickBooks_Object_ReceivePayment object
