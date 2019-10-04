@@ -33,7 +33,12 @@ class QuickBooks_QBXML_Object_Invoice_InvoiceLine extends QuickBooks_QBXML_Objec
 	public function __construct($arr = array())
 	{
 		parent::__construct($arr);
-	}
+	}	
+	
+	public function setTxnLineID($TxnLineId)
+    	{
+        	return $this->set('TxnLineID', $TxnLineId);
+    	}
 	
 	public function getTxnLineID()
 	{
