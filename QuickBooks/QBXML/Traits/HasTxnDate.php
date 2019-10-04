@@ -1,6 +1,6 @@
 <?php
 
-trait HasTxnDate
+trait QuickBooks_QBXML_Traits_HasTxnDate
 {
     public function setFromTxnDate($date)
     {
