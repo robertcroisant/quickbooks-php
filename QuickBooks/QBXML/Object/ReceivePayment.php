@@ -18,7 +18,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 /**
  * HasTxnDate trait
  */
-Quickbooks_Loader::load('/Quickbooks/QBXML/Traits/HasTxnDate.php');
+Quickbooks_Loader::load('/QuickBooks/QBXML/Traits/HasTxnDate.php');
 
 /**
  * Dependency class (applied payment)
