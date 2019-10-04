@@ -41,10 +41,17 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/Invoice/ShippingLine.php');
 QuickBooks_Loader::load('/QuickBooks/QBXML/Object/Invoice/SalesTaxLine.php');
 
 /**
+ * HasTxnDate trait
+ */
+Quickbooks_Loader::load('/Quickbooks/QBXML/Traits/HasTxnDate.php');
+
+/**
  * QuickBooks Invoice class definition
  */
 class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 {
+	use HasTxnDate;
+	
 	/**
 	 * Create a new QuickBooks Invoice object
 	 * 
