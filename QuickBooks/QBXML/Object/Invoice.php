@@ -50,7 +50,7 @@ Quickbooks_Loader::load('/QuickBooks/QBXML/Traits/HasTxnDate.php');
  */
 class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 {
-	use HasTxnDate;
+	use QuickBooks_QBXML_Traits_HasTxnDate;
 	
 	/**
 	 * Create a new QuickBooks Invoice object
