@@ -536,7 +536,7 @@ abstract class QuickBooks_Driver
 	 * @param mixed $ident		A unique identifier 
 	 * @return boolean
 	 */
-	final public function queueEnqueue($user, $action, $ident, $replace = true, $priority = 0, $extra = null, $qbxml = null)
+	final public function queueEnqueue($user, $action, $ident, $replace = true, $priority = 0, $extra = null, $qbxml = null, $type = null)
 	{
 		if (!strlen($ident))
 		{
@@ -559,13 +559,13 @@ abstract class QuickBooks_Driver
 		$hookerr = '';
 		$this->_callHook(QUICKBOOKS_DRIVER_HOOK_AUTHRESOLVE, null, $hookerr, $hookdata);
 		
-		return $this->_queueEnqueue($user, $action, $ident, $replace, $priority, $extra, $qbxml);
+		return $this->_queueEnqueue($user, $action, $ident, $replace, $priority, $extra, $qbxml, $type);
 	}
 	
 	/**
 	 * @see QuickBooks_Driver::queueEnqueue()
 	 */
-	abstract protected function _queueEnqueue($user, $action, $ident, $replace = true, $priority = 0, $extra = null, $qbxml = null);
+	abstract protected function _queueEnqueue($user, $action, $ident, $replace = true, $priority = 0, $extra = null, $qbxml = null, $type = null);
 	
 	/**
 	 * Remove an item from the queue
