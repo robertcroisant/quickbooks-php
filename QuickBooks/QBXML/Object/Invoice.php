@@ -44,13 +44,17 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/Invoice/SalesTaxLine.php');
  * HasTxnDate trait
  */
 Quickbooks_Loader::load('/QuickBooks/QBXML/Traits/HasTxnDate.php');
+Quickbooks_Loader::load('/QuickBooks/QBXML/Traits/HasModifiedDate.php');
+Quickbooks_Loader::load('/QuickBooks/QBXML/Traits/HasIncludedLineItems.php');
 
 /**
  * QuickBooks Invoice class definition
  */
 class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 {
-	use QuickBooks_QBXML_Traits_HasTxnDate;
+    use QuickBooks_QBXML_Traits_HasTxnDate;
+    use QuickBooks_QBXML_Traits_HasModifiedDate;
+    use QuickBooks_QBXML_Traits_HasIncludeLineItems;
 	
 	/**
 	 * Create a new QuickBooks Invoice object
