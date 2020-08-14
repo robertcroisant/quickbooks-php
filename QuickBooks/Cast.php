@@ -96,7 +96,7 @@ class QuickBooks_Cast
 		$count = strlen($str);
 		for ($i = 0; $i < $count; $i++)
 		{
-			$ord = ord($str{$i});
+			$ord = ord($str[$i]);
 			
 			if ($ord != ord("\t") and 
 				$ord != ord("\n") and 
@@ -105,11 +105,11 @@ class QuickBooks_Cast
 			{
 				if (isset($replace[$ord]))
 				{
-					$str{$i} = $replace[$ord];
+					$str[$i] = $replace[$ord];
 				}
 				else
 				{
-					$str{$i} = ' ';
+					$str[$i] = ' ';
 				}
 			}
 		}
