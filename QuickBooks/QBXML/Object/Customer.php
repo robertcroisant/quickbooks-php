@@ -15,11 +15,15 @@
  */
 QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 
+Quickbooks_Loader::load('/QuickBooks/QBXML/Traits/HasModifiedDate.php');
+
 /**
  * QuickBooks Customer object class
  */
 class QuickBooks_QBXML_Object_Customer extends QuickBooks_QBXML_Object
 {
+    use QuickBooks_QBXML_Traits_HasModifiedDate;
+
 	/**
 	 * Create a new QuickBooks_Object_Customer object
 	 * 
