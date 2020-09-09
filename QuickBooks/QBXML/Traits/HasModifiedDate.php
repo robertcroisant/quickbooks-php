@@ -23,7 +23,7 @@ trait QuickBooks_QBXML_Traits_HasModifiedDate
         return $this->get('FromModifiedDate');
     }
 
-    public function setModifiedDateRangeFilterModifiedToDate($date)
+    public function setModifiedDateRangeFilterToModifiedDate($date)
     {
         return $this->set('ModifiedDateRangeFilter ToModifiedDate', $date);
     }
@@ -33,7 +33,7 @@ trait QuickBooks_QBXML_Traits_HasModifiedDate
         return $this->get('ModifiedDateRangeFilter ToModifiedDate');
     }
 
-    public function setModifiedToDate($date)
+    public function setToModifiedDate($date)
     {
         return $this->set('ToModifiedDate', $date);
     }
